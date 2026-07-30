@@ -18,6 +18,9 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      - name: Docker version
+        run: docker version
+
       - name: Build Docker image
         run: |
           docker build \
